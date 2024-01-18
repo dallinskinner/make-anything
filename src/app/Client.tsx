@@ -1,8 +1,17 @@
 "use client";
 
 import { Step } from "@/components/Step";
-import { FormEvent, useState } from "react";
-import { Button, Card, Form, Input, Radio } from "react-daisyui";
+import { FormEvent, useEffect, useState } from "react";
+import {
+  Alert,
+  Button,
+  Card,
+  Form,
+  Input,
+  Loading,
+  Radio,
+  Toast,
+} from "react-daisyui";
 
 export function Client() {
   const [personName, setPersonName] = useState("");
@@ -13,13 +22,32 @@ export function Client() {
   const [contactType, setContactType] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
 
+  const [showToast, setShowToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => {
+        setShowToast(false);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
+
   function reset() {
-    return;
+    setPersonName("");
     setStep1("");
     setStep2("");
     setName("");
     setCountry("");
     setContactType("");
+  }
+
+  function onSuccess() {
+    setIsSubmitting(false);
+    setShowToast(true);
+    reset();
   }
 
   async function sendEmail({
@@ -58,6 +86,7 @@ export function Client() {
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    setIsSubmitting(true);
 
     await sendEmail({
       personName,
@@ -69,10 +98,12 @@ export function Client() {
       emailAddress,
     });
 
-    reset();
+    onSuccess();
   }
 
   async function handleAlissaClick() {
+    setIsSubmitting(true);
+
     await sendEmail({
       personName,
       step1,
@@ -83,7 +114,7 @@ export function Client() {
       emailAddress: "alissatheskinner@gmail.com",
     });
 
-    reset();
+    onSuccess();
   }
 
   return (
@@ -186,8 +217,13 @@ export function Client() {
                 />
 
                 {contactType && (
-                  <Button color="primary" className="mt-3" type="submit">
-                    Submit
+                  <Button
+                    color="primary"
+                    className="mt-3"
+                    disabled={isSubmitting}
+                    type="submit"
+                  >
+                    {isSubmitting ? <Loading /> : "Submit"}
                   </Button>
                 )}
 
@@ -198,13 +234,23 @@ export function Client() {
                     color="secondary"
                     onClick={handleAlissaClick}
                   >
-                    Click here if you are Alissa
+                    {isSubmitting ? (
+                      <Loading />
+                    ) : (
+                      "Click here if you are Alissa"
+                    )}
                   </Button>
                 )}
               </Form>
             ) : null
           }
         />
+      )}
+
+      {showToast && (
+        <Toast vertical="middle" horizontal="center">
+          <Alert status="info">Thank you for your submission</Alert>
+        </Toast>
       )}
     </>
   );

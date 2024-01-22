@@ -13,14 +13,8 @@ export async function POST(request: NextRequest) {
     from: "no-reply@dallinskinner.com",
     subject: "Make Anything Request",
     text: `Make Anything
-    
-    Name: ${data.personName}
-    Type: ${data.step1}
-    Sport: ${data.step2}
-    League Name: ${data.name}
-    League Country: ${data.country}
-    Contact Preference: ${data.contactType}
-    Email/Number: ${data.emailAddress}
+
+    ${data.emailContent}
     `,
   };
 

@@ -8,8 +8,9 @@ import { RadioGroup } from "@/components/RadioGroup";
 import { ShoeBrandQuestions } from "@/components/ShoeBrandQuestions";
 import { TextInput } from "@/components/TextInput";
 import { QuestionHeading } from "@/components/Typography";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
-import { Alert, Toast } from "react-daisyui";
+import { Alert, Button, Toast } from "react-daisyui";
 
 export function App() {
   const [personName, setPersonName] = useState("");
@@ -63,6 +64,10 @@ export function App() {
 
   return (
     <>
+      <Button color="secondary" tag="a" href="/intro">
+        <ArrowLeftIcon className="size-5 mr-1" /> Back to home
+      </Button>
+
       <QuestionHeading>What is your name?</QuestionHeading>
 
       <Card>

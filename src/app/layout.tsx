@@ -19,7 +19,9 @@ export default function RootLayout({
     <html data-theme="dark" lang="en">
       <body className={`${inter.className} min-h-screen`}>
         <Navbar />
-        {children}
+        <main className="p-5">
+          <div className="w-full max-w-5xl mx-auto">{children}</div>
+        </main>
       </body>
     </html>
   );

@@ -16,6 +16,8 @@
     "react": "^18",
     "react-daisyui": "^5.0.0",
     "react-dom": "^18",
+    "react-rough-notation": "^1.0.5",
+    "rough-notation": "^0.5.1",
     "vercel": "^33.1.0"
   },
   "devDependencies": {

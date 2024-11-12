@@ -11,8 +11,8 @@ export default function Welcome() {
       </h1>
 
       <p className="mt-12 text-2xl leading-normal">
-        Welcome! We'd love for you to work here. We're a small team of
-        developers. We're looking for people who are passionate about{" "}
+        Welcome! We&lsquo;d love for you to work here. We&lsquo;re a small team
+        of developers. We&lsquo;re looking for people who are passionate about{" "}
         <RoughNotation color="oklch(var(--wa))" type="highlight" show>
           making anything!
         </RoughNotation>

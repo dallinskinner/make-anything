@@ -27,6 +27,10 @@ export default function Intro() {
       <div className="text-center mt-12">
         <Button size="lg" color="primary" tag="a" href="/">
           Get Started
+        </Button>{" "}
+        or{" "}
+        <Button size="lg" color="secondary" tag="a" href="/careers">
+          Work Here
         </Button>
       </div>
     </>

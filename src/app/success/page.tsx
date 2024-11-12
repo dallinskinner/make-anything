@@ -1,8 +1,3 @@
-"use client";
-
-import { Link } from "react-daisyui";
-import { RoughNotation } from "react-rough-notation";
-
 export default function Success() {
   return (
     <>

@@ -12,7 +12,7 @@ export function Navbar({ className, ...props }: NavbarProps) {
   return (
     <BaseNavBar className={`${className} bg-base-100 p-3 shadow-md`} {...props}>
       <div className="flex-1">
-        <Button tag="a" className="text-xl normal-case" color="ghost">
+        <Button tag="a" href="/" className="text-xl normal-case" color="ghost">
           Make Anything
         </Button>
       </div>

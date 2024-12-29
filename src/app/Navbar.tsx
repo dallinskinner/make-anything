@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import {
   Badge,
   Navbar as BaseNavBar,
@@ -12,7 +14,12 @@ export function Navbar({ className, ...props }: NavbarProps) {
   return (
     <BaseNavBar className={`${className} bg-base-100 p-3 shadow-md`} {...props}>
       <div className="flex-1">
-        <Button tag="a" href="/" className="text-xl normal-case" color="ghost">
+        <Button
+          tag="a"
+          href="/intro"
+          className="text-xl normal-case"
+          color="ghost"
+        >
           Make Anything
         </Button>
       </div>
@@ -26,7 +33,7 @@ export function Navbar({ className, ...props }: NavbarProps) {
             shape="circle"
           >
             <div className="w-10 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <Image src="/images/hacker.jpg" alt="" width="40" height="40" />
             </div>
           </Button>
           <Dropdown.Menu className="mt-3 z-[1] w-52 menu-sm shadow-xl">

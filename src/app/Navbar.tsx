@@ -18,6 +18,15 @@ export function Navbar({ className, ...props }: NavbarProps) {
           Make Anything
         </Button>
       </div>
+      <div>
+        <Image
+          className="bounce-left"
+          src="/images/arrow.png"
+          alt=""
+          height={40}
+          width={40}
+        />
+      </div>
       <div className="flex-none">
         <Dropdown end>
           <Button

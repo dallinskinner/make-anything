@@ -64,7 +64,7 @@ export function App() {
 
   return (
     <>
-      <Button color="secondary" tag="a" href="/intro">
+      <Button color="secondary" tag="a" href="/">
         <ArrowLeftIcon className="size-5 mr-1" /> Back to home
       </Button>
 

@@ -4,18 +4,14 @@ import { RoughNotation } from "react-rough-notation";
 export default function Hacker() {
   return (
     <div className="text-center">
-      <div className="rotate">
-        <RoughNotation color="oklch(var(--wa))" type="crossed-off" show>
-          <h1 className="text-9xl mt-16">???????????????</h1>
-        </RoughNotation>
-      </div>
+      <h1 className="text-6xl mt-16">We&lsquo;re working on it</h1>
 
       <Image
         className="mx-auto mt-12"
-        src="/images/hacker.jpg"
+        src="/images/rnl.png"
         alt="Stylized image of a computer hacker"
         width={540}
-        height={360}
+        height={540}
       />
     </div>
   );

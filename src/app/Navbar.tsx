@@ -18,15 +18,7 @@ export function Navbar({ className, ...props }: NavbarProps) {
           Make Anything
         </Button>
       </div>
-      <div>
-        <Image
-          className="bounce-left"
-          src="/images/arrow.png"
-          alt=""
-          height={40}
-          width={40}
-        />
-      </div>
+
       <div className="flex-none">
         <Dropdown end>
           <Button
@@ -37,7 +29,7 @@ export function Navbar({ className, ...props }: NavbarProps) {
             shape="circle"
           >
             <div className="w-10 rounded-full">
-              <Image src="/images/hacker.jpg" alt="" width="40" height="40" />
+              <Image src="/images/rnl.png" alt="" width="40" height="40" />
             </div>
           </Button>
           <Dropdown.Menu className="mt-3 z-[1] w-52 menu-sm shadow-xl">

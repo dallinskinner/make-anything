@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { RoughNotation } from "react-rough-notation";
+import { Button } from "react-daisyui";
 
 export default function Hacker() {
   return (
@@ -13,6 +15,13 @@ export default function Hacker() {
         width={540}
         height={540}
       />
+
+      <p className="mt-10">
+        While we&lsquo;re fixing it, access the usual Make Anything app{" "}
+        <Button size="sm" color="secondary" tag="a" href="/make">
+          here
+        </Button>
+      </p>
     </div>
   );
 }

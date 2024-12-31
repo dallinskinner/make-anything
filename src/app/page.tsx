@@ -33,6 +33,16 @@ export default function Intro() {
           Work Here
         </Button>
       </div>
+
+      <div>
+        <h2 className="text-center mt-24 text-4xl font-bold">Recent updates</h2>
+
+        <h3 className="text-xl font-bold mt-6">December 30, 2024</h3>
+        <p>
+          Removed the hacker changes and fixed the profile picture. Added recent
+          updates to home page.
+        </p>
+      </div>
     </>
   );
 }

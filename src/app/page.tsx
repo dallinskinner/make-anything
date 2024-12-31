@@ -42,6 +42,9 @@ export default function Intro() {
           Removed the hacker changes and fixed the profile picture. Added recent
           updates to home page.
         </p>
+
+        <h3 className="text-xl font-bold mt-6">December 29, 2024</h3>
+        <p>?????????????</p>
       </div>
     </>
   );

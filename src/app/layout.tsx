@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./Navbar";
+import { Alert, Toast } from "react-daisyui";
+import { FeedbackToast } from "@/components/FeedbackToast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,7 @@ export default function RootLayout({
         <main className="p-5">
           <div className="w-full max-w-5xl mx-auto">{children}</div>
         </main>
+        <FeedbackToast />
       </body>
     </html>
   );

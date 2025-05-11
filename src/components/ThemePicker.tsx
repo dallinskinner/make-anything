@@ -13,9 +13,14 @@ const themes = [
 ];
 
 export function ThemePicker() {
-  const [theme, setTheme] = useState(
-    window.localStorage.getItem("theme") || "dark"
-  );
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem("theme");
+    if (stored) {
+      setTheme(stored);
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);

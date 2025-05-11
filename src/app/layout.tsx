@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "./Navbar";
 import { Alert, Toast } from "react-daisyui";
 import { FeedbackToast } from "@/components/FeedbackToast";
+import { ThemePicker } from "@/components/ThemePicker";
 
 const inter = Inter({ subsets: ["latin"] });
 

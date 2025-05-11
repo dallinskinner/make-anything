@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemePicker } from "@/components/ThemePicker";
 import Image from "next/image";
 
 import {
@@ -20,6 +21,9 @@ export function Navbar({ className, ...props }: NavbarProps) {
       </div>
 
       <div className="flex-none">
+        <div className="mr-2">
+          <ThemePicker />
+        </div>
         <Dropdown end>
           <Button
             tag="label"
